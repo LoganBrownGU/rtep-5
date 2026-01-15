@@ -56,6 +56,15 @@ Before writing code, run ```bash git pull``` to acquire the most recent changes 
 
 If you make changes and run ```bash git pull``` without committing, you may end up with this: 
 
+```
+error: Your local changes to the following files would be overwritten by merge:
+	how2git/git.typ
+Please commit your changes or stash them before you merge.
+Aborting
+```
+
+Do what it says. Either ```bash git stash```, or commit. 
+
 = Branches
 Adding a new feature? Make a branch for it. Experimenting? Make a branch. Branches let multiple people work on the repo without stepping on each other's toes. 
 
@@ -92,10 +101,13 @@ Note that any file beginning with a "`.`", including `.gitignore`, will not be i
 
 = Sick tips & tricks
 
+- ```bash git diff``` to see all changes since the last commit
 - ```bash git log``` to see a list of commits and when they were made.
 - ```bash git branch -a``` to see all branches
 - ```bash git switch branch-name``` to switch to branch `branch-name`
 - ```bash git stash``` to temporarily discard changes since last commit, and ```bash git stash pop``` to bring them back
+- ```bash echo "bawbag" | cowsay```
+- If you really get stuck in some kind of mergy quagmire and you don't care about your local changes, just delete your working copy (```bash rm -rf rtep-5```) and clone again. 
 
 
 = Issues
@@ -107,6 +119,8 @@ Make them informative. Explain the issue. Add comments when more is discovered a
 Add an issue for a bug. Add an issue for a new feature. Add an issue for a feature to be removed. Add an issue to remind you to add issues. Add an issue for your granny's birthday. If an issue becomes a non-issue, or unplanned, it can be closed. 
 
 Issues are a to-do list. When there are no more issues, we are finished.
+
+I promise I meant for this to be a page max.
 
 = Links 2 vids
 
