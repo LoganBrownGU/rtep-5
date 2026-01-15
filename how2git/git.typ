@@ -72,6 +72,10 @@ When you create a branch, you choose a branch from which it stems. When the bran
 
 NO TWO PEOPLE SHOULD BE WORKING ON THE SAME BRANCH AT THE SAME TIME. If you would like to make changes to someone else's branch, ask them nicely.  
 
+- *Create a branch*: ```bash git branch new-branch```
+- *Switch branches*: ```bash git switch other-branch```
+- *Delete a branch*: ```bash git branch -d old-branch```
+
 = Merging
 
 Once a branch has served its purpose, its contents can be merged into another branch. Sometimes this is as easy as ```bash git merge branch-to-be-merged``` (from the branch into which the branch is to be merged). However, if changes have been made to a file in both branches, they will probably conflict. Sometimes this can be automatically resolved, sometimes you have to manually go in and edit the file, then commit the result.
