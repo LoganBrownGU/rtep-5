@@ -2,6 +2,9 @@
 #show raw: it => {
   box(fill: gray.lighten(70%), outset: (x: 0em, y: 0.5em), inset: (x: 0.3em, y: 0em), it)
 }
+#show link: it => {
+  underline(text(blue, it))
+}
 
 #set heading(numbering: "1.") 
 #set par(justify: true)
@@ -11,6 +14,8 @@
 #text(size: 24pt)[Everything u need 2 know about git]
 
 Git and GitHub are different things. Git is the version control system, GitHub is the remote repository hosting system. As an analogy, git is a book, and GitHub is a library. 
+
+Git tracks _changes_ to files. It can tell you what changed between each version (each of which has a unique ID), including additions to files, deletions from files, changes to files, new files, and deleted files. 
 
 Git can track ANY file type. If you ask me "can I put a PNG on git?" I will say yes. If you ask me "can I put a Latex file on git?" I will say yes. When you upload your brain to the computer, you can put it on git. 
 
@@ -128,4 +133,8 @@ I promise I meant for this to be a page max.
 
 = Links 2 vids
 
-I'll add these later if I remember. 
+A short one: #link("https://youtu.be/hwP7WQkmECE?si=XEcRkUC_GT1eVBkB")
+
+An interesting one: #link("https://youtu.be/bSA91XTzeuA?si=d19L5whHNGqzsaPr")
+
+Honestly just ask me if ur stuck I don't mind 
