@@ -4,6 +4,7 @@
 }
 
 #set heading(numbering: "1.") 
+#set par(justify: true)
 
 
 
@@ -13,11 +14,13 @@ Git and GitHub are different things. Git is the version control system, GitHub i
 
 Git can track ANY file type. If you ask me "can I put a PNG on git?" I will say yes. If you ask me "can I put a Latex file on git?" I will say yes. When you upload your brain to the computer, you can put it on git. 
 
+When you run ```bash git clone git@github.com:/etc``` you create a local working copy of the repo. If you never type ```bash git clone``` or `pull` or `push` again, this will never change without you changing it. 
+
 How 2 git/github: 
 
 = Commits
 
-When you commit, you create a version. Any commit can be retrieved and the repo browsed at that point in the history. This is very very useful --- say you get something working, then break it later without realising, you can go back and see the working code. 
+When you commit, you create a version. Any commit can be later retrieved and the repo browsed at that point in the history. This is very very useful --- say you get something working, then break it later without realising, you can go back and see the working code. 
 
 - *Make small, frequent commits*: The more frequent the better. This makes it easier to see the changes over time. 
 - *Write informative commit messages*: you can't see where the code _was_ working if you have no way of knowing when that was.
@@ -43,11 +46,15 @@ git commit    # Will open a text editor where you can write your commit message
 
 You can add just specific files with ```bash git add file.txt```
 
+If you intend to see your changes ever again in the corporeal realm, do not turn off your laptop without committing them. If you do not commit your changes, they will cease to exist when they are no longer observed. This is hyperbole, but you should treat it as fact.  
+
 = Pushing and Pulling
 
 Once you have made a commit, run ```bash git push``` to publish it to GitHub. It is rare that you shouldn't immediately push after making a commit. 
 
 Before writing code, run ```bash git pull``` to acquire the most recent changes to your branch. If changes have been made from a different working copy then this will update your working copy. 
+
+If you make changes and run ```bash git pull``` without committing, you may end up with this: 
 
 = Branches
 Adding a new feature? Make a branch for it. Experimenting? Make a branch. Branches let multiple people work on the repo without stepping on each other's toes. 
@@ -95,9 +102,9 @@ Note that any file beginning with a "`.`", including `.gitignore`, will not be i
 
 Use them. Go into the "Issues" tab on GitHub and add them. Reference them in commits (e.g. "Relates to \#9" or "Closes \#12"). Using "close," "closes," or "fixes" in commit messages will close the commits in GitHub. Doing so in pull requests will also close them. You should do this. If you are manually closing issues in GitHub, you're doing something wrong.
 
-Make them informative. Explain the issue. Add comments when more is discovered about the issue. Do not assume that an issue fixed will not ever resurface. Reopen the issue if it does.  
+Make them informative. Explain the issue. Add comments when more is discovered about the issue. Do not assume that an issue fixed will not ever resurface. Reopen the issue if it does. Link issues. Create sub-issues. QA "engineers" are glorified issue-writers.  
 
-Add an issue for a new feature. Add an issue for a feature to be removed. Add an issue to remind you to add issues. Add an issue for your granny's birthday. If an issue becomes a non-issue, or unplanned, it can be closed. 
+Add an issue for a bug. Add an issue for a new feature. Add an issue for a feature to be removed. Add an issue to remind you to add issues. Add an issue for your granny's birthday. If an issue becomes a non-issue, or unplanned, it can be closed. 
 
 Issues are a to-do list. When there are no more issues, we are finished.
 
